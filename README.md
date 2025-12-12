@@ -5,18 +5,18 @@ We created a benchmark to compare `SerializableCoder` (Java Serialization) and `
 
 ## Benchmark Setup
 - **Object Type**: `TestObject` (POJO with String, int, List, Map, boolean)
-- **Count**: 100,000 objects
+- **Count**: 1,000,000 objects
 - **Iterations**: 10 (after warmup)
 - **Environment**: Local execution
 
-## Results
+## Results (1,000,000 Objects)
 
 | Metric | SerializableCoder | AvroCoder | Difference |
 | :--- | :--- | :--- | :--- |
-| **Avg Serialize Time** | ~169 ms | ~38 ms | **~4.4x Faster** |
-| **Avg Deserialize Time** | ~935 ms | ~111 ms | **~8.4x Faster** |
-| **Avg Size per Object** | ~491 bytes | ~58 bytes | **~8.5x Smaller** |
-| **Total Size** | 46.79 MB | 5.51 MB | **~8.5x Smaller** |
+| **Avg Serialize Time** | ~2360 ms | ~384 ms | **~6.1x Faster** |
+| **Avg Deserialize Time** | ~9567 ms | ~754 ms | **~12.7x Faster** |
+| **Avg Size per Object** | ~492 bytes | ~59 bytes | **~8.3x Smaller** |
+| **Total Size** | 468.85 MB | 56.04 MB | **~8.3x Smaller** |
 
 ## Conclusion
 `AvroCoder` is vastly superior to `SerializableCoder` for both performance and storage efficiency.

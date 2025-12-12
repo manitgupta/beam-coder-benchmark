@@ -15,7 +15,7 @@ import org.apache.beam.sdk.extensions.avro.coders.AvroCoder;
 
 public class Benchmark {
 
-  private static final int NUM_OBJECTS = 100_000;
+  private static final int NUM_OBJECTS = 1_000_000;
   private static final int WARMUP_ITERATIONS = 5;
   private static final int BENCHMARK_ITERATIONS = 10;
 
